@@ -3,6 +3,7 @@
 ## 환경  
 
 * nodejs (npm) - 자바스크립트 패키지 관리 제공  
+`npm init -y`  
 
 * webpack (webpack-cli, webpack-dev-server, webpack-merge) - javascript 번들 작성 및 개발 환경 제공    
 `webpack i webpack webpack-cli webpack-dev-server webpack-merge -D`  
