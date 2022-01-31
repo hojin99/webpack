@@ -1,6 +1,6 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
-
+const {VueLoaderPlugin} = require('vue-loader');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -12,6 +12,10 @@ const common = {
     },
     module: {
         rules: [
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+            },
             {
                 test: /\.(sc|sa|c)ss$/i,
                 use: [
@@ -27,7 +31,8 @@ const common = {
             title: 'webpack',
             template: 'public/index.html'
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new VueLoaderPlugin(),
     ]
 }
 

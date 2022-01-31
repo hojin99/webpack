@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development",
+    "dev": "webpack-dev-server --open --hot --mode=development",
     "prod": "webpack --mode=production"
   },
   "repository": {
@@ -20,14 +20,21 @@
   "homepage": "https://github.com/hojin99/html_css#readme",
   "devDependencies": {
     "css-loader": "^6.5.1",
+    "eslint": "^8.8.0",
+    "eslint-plugin-vue": "^8.4.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "vue": "^2.6.14"
   }
 }

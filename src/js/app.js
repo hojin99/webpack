@@ -1,4 +1,10 @@
-let css = require('../scss/app.css');
-let scss = require('../scss/app.scss');
+import Vue from 'vue';
+import Hello from '../vue/Hello.vue';
 
-console.log('Hello, Webpack');
+const css = require('../scss/app.css');
+const scss = require('../scss/app.scss');
+
+new Vue({
+    el:'#app',
+    render:h => h(Hello)
+});
