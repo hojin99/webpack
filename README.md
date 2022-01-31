@@ -3,11 +3,16 @@
 ## 환경  
 
 nodejs (npm) - 자바스크립트 패키지 관리 제공  
-webpack (webpack-cli, webpack-dev-server) - javascript 번들 작성 및 개발 환경 제공    
+
+webpack (webpack-cli, webpack-dev-server, webpack-merge) - javascript 번들 작성 및 개발 환경 제공    
+`webpack i webpack webpack-cli webpack-dev-server webpack-merge -D`  
 https://webpack.js.org/concepts/  
+https://webpack.js.org/guides/getting-started/  
+https://webpack.js.org/api/cli/  
+https://webpack.js.org/configuration/dev-server/  
+https://www.npmjs.com/package/webpack-merge  
 
 html-webpack-plugin - 템플릿으로 부터 webpack 출력파일을 포함하는 html 생성  
-https://webpack.js.org/guides/getting-started/  
 https://github.com/jantimon/html-webpack-plugin  
 
 sass-loader, sass(dart) - scss, sass를 css로 컴파일  

@@ -1,24 +1,21 @@
 const path = require('path');
-const devMode = process.env.NODE_ENV !== "prod";
+const { merge } = require('webpack-merge');
 
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = {
+// 공통 설정
+const common = {
     entry: './src/js/app.js',
     output: {
         filename: 'app.bundle.js'
-    },
-    devServer: {
-        compress: true,
-        port: 9000
     },
     module: {
         rules: [
             {
                 test: /\.(sc|sa|c)ss$/i,
                 use: [
-                    devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
               ]
@@ -27,9 +24,20 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'HTML, CSS Basic',
+            title: 'webpack',
             template: 'public/index.html'
         }),
         new MiniCssExtractPlugin()
     ]
+}
+
+// 모드 별 설정 파일 merge
+module.exports= (env, argv) => {
+    console.log(`mode:${argv.mode}`);
+
+    if(argv.mode === 'development') {
+        return merge(common, require(`./config/webpack.dev.js`));
+    } else {
+        return merge(common, require(`./config/webpack.prod.js`));
+    }
 }
