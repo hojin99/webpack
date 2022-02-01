@@ -34,10 +34,12 @@ https://github.com/webpack-contrib/mini-css-extract-plugin
 * vue-loader, vue-template-compiler - webpack을 통해서 vue 싱글파일컴포넌트를 지원해 줌  
 `npm i vue-loader vue-template-compiler -D`  
 
-* eslint eslint-vue-plugin - 문법 체크 지원  
-`npm i eslint -D`
+* eslint eslint-vue-plugin bable-eslint - 문법 체크 지원  
+`npm i eslint babel-eslint -D`
 구성파일 작업, 환경 자동 구성 (vue 선택 - eslint-plugin-vue 설치)  
 `npm init @eslint/config`  
+
+* file-loader  
 
 ## 실행  
 package.json의 scripts를 통해서 실행
