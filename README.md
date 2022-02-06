@@ -2,6 +2,10 @@
 
 ## 환경  
 
+* 개발툴 - Visual Studio Code 사용  
+
+* 웹브라우저 - Chrome  
+
 * nodejs (npm) - 자바스크립트 패키지 관리 제공  
 `npm init -y`  
 
