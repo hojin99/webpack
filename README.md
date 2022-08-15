@@ -35,9 +35,10 @@
 * file-loader  
 
 ## 실행  
-package.json의 scripts를 통해서 실행
-dev - 개발 서버 Run (http://localhost:9000에서 테스트, 코드 변경 시 자동으로 빌드 및 적용됨)  
-prod - 패키징 (dist폴더)  
+* npm install 입력 - npm 의존성 업데이트  
+* package.json의 scripts를 통해서 실행  
+    dev - 개발 서버 Run (http://localhost:9000에서 테스트, 코드 변경 시 자동으로 빌드 및 적용됨)  
+    prod - 패키징 (dist폴더)  
 
 ## 참조
 
