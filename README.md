@@ -32,7 +32,11 @@
 구성파일 작업, 환경 자동 구성 (vue 선택 - eslint-plugin-vue 설치)  
 `npm init @eslint/config`  
 
-* file-loader  
+* file-loader - 아이콘, 이미지 등 file을 모듈로 import 할 수 있는 형식으로 외부 파일로 분리해서 복사
+`npm i file-loader -D`  
+
+* url-loader - 아이콘, 이미지 등 file을 javascript 상에서 인라인 문자열로 모듈로 import 될 수 있도록 변환
+`npm i url-loader -D`
 
 ## 실행  
 package.json의 scripts를 통해서 실행
@@ -58,7 +62,10 @@ https://webpack.js.org/loaders/style-loader/
 * mini css extract plugin
 https://github.com/webpack-contrib/mini-css-extract-plugin  
 * vue loader  
-
+https://vue-loader.vuejs.org/  
 * eslint
-
-* file loader
+https://eslint.org/  
+* file loader (v5에서 deprecated -> asset module)
+https://v4.webpack.js.org/loaders/file-loader/  
+* url loader (v5에서 deprecated -> asset module)
+https://v4.webpack.js.org/loaders/url-loader/  
